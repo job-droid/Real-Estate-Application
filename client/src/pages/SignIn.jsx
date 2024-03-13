@@ -6,6 +6,7 @@ import {
   signInStart,
   signInSuccess,
 } from "../redux/user/userSlicer.js";
+import OAuth from "../components/OAuth.jsx";
 
 function SignIn() {
   const [formData, setFormData] = useState({});
@@ -64,10 +65,11 @@ function SignIn() {
         />
         <button
           disabled={loading}
-          className="bg-green-700 text-white p-3 rounded-lg hover:opacity-95 disabled:opacity-80"
+          className="bg-green-700 text-white font-semibold p-3 rounded-lg hover:opacity-95 disabled:opacity-80"
         >
           {loading ? "Loading" : "Sign In"}
         </button>
+        <OAuth />
       </form>
       <div className="flex gap-3 mt-3">
         <p>Dont have an account?</p>
